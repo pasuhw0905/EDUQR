@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduQR 설문 생성기</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">EduQR 설문 생성기</h1>
+
+    <button id="makeQrBtn" class="primary-btn">QR만들기</button>
+
+    <section id="builder" class="builder hidden" aria-hidden="true">
+      <div class="section-header">
+        <h2>기본 정보</h2>
+      </div>
+      <label class="field">
+        <span class="label">교육명</span>
+        <input id="programName" type="text" class="input" placeholder="예) 2025 안전교육 기본 과정" />
+      </label>
+
+      <div class="section-header with-action">
+        <h2>입력 항목 설정</h2>
+        <div class="actions">
+          <button id="addDefaultFieldsBtn" class="secondary-btn" type="button">기본 필드 추가</button>
+          <button id="addQuestionBtn" class="secondary-btn" type="button">+ 항목 추가</button>
+        </div>
+      </div>
+
+      <div id="questionsContainer" class="questions"></div>
+
+      <div class="footer">
+        <button id="generateBtn" class="primary-btn" type="button">QR 생성</button>
+      </div>
+    </section>
+
+    <section id="qrResult" class="qr-result hidden" aria-hidden="true">
+      <div class="section-header">
+        <h2>생성된 QR 코드</h2>
+      </div>
+      <div class="qr-box">
+        <img id="qrImage" alt="QR 코드" />
+        <div class="qr-actions">
+          <a id="surveyLink" class="link" href="#" target="_blank" rel="noopener">설문 링크 열기</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html> 
