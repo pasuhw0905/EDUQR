@@ -41,6 +41,28 @@ html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe
 .survey-field { display: flex; flex-direction: column; gap: 8px; }
 .field-label { font-size: 15px; font-weight: 600; color: #334155; }
 .survey-field .input { width: 100%; }
+.result-message { margin-top: 12px; color: #059669; font-weight: 600; }
+
+.print-section { margin-top: 24px; padding: 24px; border: 1px dashed #94a3b8; border-radius: 12px; background: #fff; }
+.badge-preview {
+  width: 320px;
+  border: 2px solid #0f172a;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+.badge-program { font-size: 16px; font-weight: 600; color: #1e293b; margin-bottom: 12px; }
+.badge-name { font-size: 32px; font-weight: 800; color: #0f172a; }
+.badge-org { font-size: 18px; font-weight: 600; color: #334155; margin-top: 8px; }
+
+@media print {
+  body * { visibility: hidden; }
+  #badgePreview, #badgePreview * { visibility: visible; }
+  #badgePreview { position: absolute; top: 20px; left: 20px; width: calc(100% - 40px); }
+}
 
 .footer { display: flex; justify-content: flex-end; margin-top: 18px; }
 
